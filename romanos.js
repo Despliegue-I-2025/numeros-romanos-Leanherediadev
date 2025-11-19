@@ -1,6 +1,10 @@
 ﻿const express = require('express');
+const cors = require('cors'); // Importar el paquete cors
+
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+app.use(cors()); // Habilitar CORS para todas las rutas
 
 // Romanos a Arabigos
 app.get('/r2a', (req, res) => {
