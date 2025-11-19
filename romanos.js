@@ -18,12 +18,12 @@ app.get('/r2a', (req, res) => {
 
   const arabicNumber = romanToArabic(romanNumeral);
   if (arabicNumber === null) {
-    return res.status(422).json({
+    return res.status(400).json({
         error: 'Número romano inválido.',
-        code: 422 });
+        code: 400 });
   }
 
-  return res.json({ arabic: arabicNumber });
+  return res.status(200).json({ arabic: arabicNumber });
 });
 
 // Arabigos a Romanos
@@ -38,13 +38,13 @@ app.get('/a2r', (req, res) => {
 
   const romanNumeral = arabicToRoman(arabicNumber);
   if (romanNumeral === null) {
-    return res.status(422).json({ 
+    return res.status(400).json({ 
       error: 'Número arábigo inválido (debe estar entre 1 y 3999.',
-      code: 422
+      code: 400
     });
   }
 
-  return res.json({ roman: romanNumeral });
+  return res.status(200).json({ roman: romanNumeral });
 });
 
 // Manejo de rutas no encontradas
