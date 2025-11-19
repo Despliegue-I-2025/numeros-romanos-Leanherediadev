@@ -1,61 +1,62 @@
 // test/romanos.test.js
-const { integerToRoman, romanToInteger } = require('../index');
+const { romanToArabic, arabicToRoman } = require('../index');
 
-describe('integerToRoman', () => {
+describe('arabicToRoman', () => {
     test('convierte números básicos', () => {
-        expect(integerToRoman(1)).toBe('I');
-        expect(integerToRoman(4)).toBe('IV');
-        expect(integerToRoman(9)).toBe('IX');
-        expect(integerToRoman(58)).toBe('LVIII');
-        expect(integerToRoman(1994)).toBe('MCMXCIV');
+        expect(arabicToRoman(1)).toBe('I');
+        expect(arabicToRoman(4)).toBe('IV');
+        expect(arabicToRoman(9)).toBe('IX');
+        expect(arabicToRoman(58)).toBe('LVIII');
+        expect(arabicToRoman(1994)).toBe('MCMXCIV');
     });
 
     test('valores límites', () => {
-        expect(integerToRoman(1)).toBe('I');
-        expect(integerToRoman(3999)).toBe('MMMCMXCIX');
+        expect(arabicToRoman(1)).toBe('I');
+        expect(arabicToRoman(3999)).toBe('MMMCMXCIX');
     });
 
     test('entrada inválida', () => {
-        expect(() => integerToRoman(0)).toThrow(RangeError);
-        expect(() => integerToRoman(4000)).toThrow(RangeError);
-        expect(() => integerToRoman(3.14)).toThrow(TypeError);
-        expect(() => integerToRoman('10')).toThrow(TypeError);
+        expect(() => arabicToRoman(0)).toThrow(RangeError);
+        expect(() => arabicToRoman(4000)).toThrow(RangeError);
+        expect(() => arabicToRoman(3.14)).toThrow(TypeError);
+        expect(() => arabicToRoman('10')).toThrow(TypeError);
     });
 });
 
-describe('romanToInteger', () => {
+describe('romanToArabic', () => {
     test('convierte números básicos', () => {
-        expect(romanToInteger('I')).toBe(1);
-        expect(romanToInteger('IV')).toBe(4);
-        expect(romanToInteger('iX')).toBe(9); // prueba con minúscula
-        expect(romanToInteger('LVIII')).toBe(58);
-        expect(romanToInteger('MCMXCIV')).toBe(1994);
+        expect(romanToArabic('I')).toBe(1);
+        expect(romanToArabic('IV')).toBe(4);
+        expect(romanToArabic('iX')).toBe(9); // prueba con minúscula
+        expect(romanToArabic('LVIII')).toBe(58);
+        expect(romanToArabic('MCMXCIV')).toBe(1994);
     });
 
     test('elimina espacios y mayúsculas', () => {
-        expect(romanToInteger('mmxix')).toBe(2019);
+        expect(romanToArabic('mmxix')).toBe(2019);
     });
 
     test('entrada inválida', () => {
-        expect(() => romanToInteger('')).toThrow(); // cadena vacía
-        expect(() => romanToInteger('A')).toThrow(); // símbolo inválido
-        expect(() => romanToInteger(123)).toThrow(TypeError); // no es cadena
+        expect(() => romanToArabic('')).toThrow(); // cadena vacía
+        expect(() => romanToArabic('A')).toThrow(); // símbolo inválido
+        expect(() => romanToArabic(123)).toThrow(TypeError); // no es cadena
     });
 
     //  Tests agregados (validaciones estrictas de números romanos)
     test('rechaza repeticiones inválidas como IIII', () => {
-        expect(() => romanToInteger('IIII')).toThrow();
+        expect(() => romanToArabic('IIII')).toThrow();
     });
 
     test('rechaza VV', () => {
-        expect(() => romanToInteger('VV')).toThrow();
+        expect(() => romanToArabic('VV')).toThrow();
     });
 
     test('rechaza LL', () => {
-        expect(() => romanToInteger('LL')).toThrow();
+        expect(() => romanToArabic('LL')).toThrow();
     });
 
     test('rechaza DD', () => {
-        expect(() => romanToInteger('DD')).toThrow();
+        expect(() => romanToArabic('DD')).toThrow();
     });
 });
+
