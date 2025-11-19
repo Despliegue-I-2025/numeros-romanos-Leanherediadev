@@ -1,5 +1,5 @@
 // test/romanos.test.js
-const { romanToArabic, arabicToRoman } = require('../index');
+const { romanToArabic, arabicToRoman } = require('../romanos');
 
 describe('arabicToRoman', () => {
     test('convierte números básicos', () => {
