@@ -16,14 +16,15 @@ app.get('/r2a', (req, res) => {
     });
   }
 
-  const arabicNumber = romanToArabic(romanNumeral);
-  if (arabicNumber === null) {
+  try {
+    const arabicNumber = romanToArabic(romanNumeral);
+    return res.status(200).json({ arabic: arabicNumber });
+  } catch (err) {
     return res.status(400).json({
-        error: 'Número romano inválido.',
-        code: 400 });
+      error: err.message,
+      code: 400
+    });
   }
-
-  return res.status(200).json({ arabic: arabicNumber });
 });
 
 // Arabigos a Romanos
@@ -36,15 +37,15 @@ app.get('/a2r', (req, res) => {
     });
   }
 
-  const romanNumeral = arabicToRoman(arabicNumber);
-  if (romanNumeral === null) {
-    return res.status(400).json({ 
-      error: 'Número arábigo inválido (debe estar entre 1 y 3999.',
+  try {
+    const romanNumeral = arabicToRoman(arabicNumber);
+    return res.status(200).json({ roman: romanNumeral });
+  } catch (err) {
+    return res.status(400).json({
+      error: err.message,
       code: 400
     });
   }
-
-  return res.status(200).json({ roman: romanNumeral });
 });
 
 // Manejo de rutas no encontradas
