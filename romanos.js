@@ -16,12 +16,21 @@ app.get('/r2a', (req, res) => {
     });
   }
 
+  // Validación de estructura de número romano
+  const validRomanRegex = /^(M{0,3})(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$/i;
+  if (!validRomanRegex.test(romanNumeral)) {
+    return res.status(400).json({
+      error: 'Número romano inválido.',
+      code: 400
+    });
+  }
+
   try {
     const arabicNumber = romanToArabic(romanNumeral);
     return res.status(200).json({ arabic: arabicNumber });
   } catch (err) {
     return res.status(400).json({
-      error: err.message,
+      error: err.message || 'Error de conversión.',
       code: 400
     });
   }
@@ -29,14 +38,32 @@ app.get('/r2a', (req, res) => {
 
 // Arabigos a Romanos
 app.get('/a2r', (req, res) => {
-  const arabicNumber = parseInt(req.query.arabic, 10);
+  const valor = req.query.arabic;
 
-  if (isNaN(arabicNumber)) {
-    return res.status(400).json({ error: 'Parametro arabic requerido y debe ser un número', code: 400 });
+  // Validar que exista el parámetro
+  if (!valor) {
+    return res.status(400).json({
+      error: 'Parametro "arabic" requerido.',
+      code: 400
+    });
   }
 
+  // Validar que sea un entero positivo sin letras ni símbolos
+  if (!/^\d+$/.test(valor)) {
+    return res.status(400).json({
+      error: 'Formato inválido: debe ser un número entero positivo.',
+      code: 400
+    });
+  }
+
+  const arabicNumber = parseInt(valor, 10);
+
+  // Validar rango permitido
   if (arabicNumber < 1 || arabicNumber > 3999) {
-    return res.status(400).json({ error: 'Número arábigo inválido (debe estar entre 1 y 3999)', code: 400 });
+    return res.status(400).json({
+      error: 'Número arábigo inválido (debe estar entre 1 y 3999).',
+      code: 400
+    });
   }
 
   try {
