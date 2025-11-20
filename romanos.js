@@ -30,11 +30,13 @@ app.get('/r2a', (req, res) => {
 // Arabigos a Romanos
 app.get('/a2r', (req, res) => {
   const arabicNumber = parseInt(req.query.arabic, 10);
+
   if (isNaN(arabicNumber)) {
-    return res.status(400).json({ 
-      error: 'Parametro arabic requerido y debe ser un número.' ,
-        code: 400
-    });
+    return res.status(400).json({ error: 'Parametro arabic requerido y debe ser un número', code: 400 });
+  }
+
+  if (arabicNumber < 1 || arabicNumber > 3999) {
+    return res.status(400).json({ error: 'Número arábigo inválido (debe estar entre 1 y 3999)', code: 400 });
   }
 
   try {
@@ -73,9 +75,7 @@ function arabicToRoman(num) {
   if (!Number.isInteger(num)) {
       throw new TypeError('El número debe ser entero');
   }
-  if (num < 1 || num > 3999) {
-      throw new RangeError('El número debe estar entre 1 y 3999');
-  }
+
 
   const valores = [
       [1000, "M"], [900, "CM"], [500, "D"], [400, "CD"],
