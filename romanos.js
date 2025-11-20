@@ -75,7 +75,9 @@ function arabicToRoman(num) {
   if (!Number.isInteger(num)) {
       throw new TypeError('El número debe ser entero');
   }
-
+  if (num < 1 || num > 3999) {
+      throw new RangeError('El número debe estar entre 1 y 3999');
+  }
 
   const valores = [
       [1000, "M"], [900, "CM"], [500, "D"], [400, "CD"],
