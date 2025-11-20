@@ -1,10 +1,11 @@
 {
   "name": "tateti-random",
   "version": "1.0.0",
-  "main": "romanos.js",
+  "description": "API para conversión Romanos ↔ Arábigos",
+  "main": "server.js",
   "scripts": {
-    "start": "node romanos.js",
-    "test": "jest"
+    "start": "node server.js",
+    "test": "jest --coverage"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -16,7 +17,10 @@
   "jest": {
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "/.vercel/"
+      "/.vercel/",
+      "/api/"
     ]
-  }
+  },
+  "author": "Leandro Heredia",
+  "license": "MIT"
 }
