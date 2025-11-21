@@ -1,45 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1763611034795" clover="3.2.0">
-  <project timestamp="1763611034796" name="All files">
-    <metrics statements="36" coveredstatements="35" conditionals="22" coveredconditionals="21" methods="3" coveredmethods="3" elements="61" coveredelements="59" complexity="0" loc="36" ncloc="36" packages="1" files="1" classes="1"/>
-    <file name="romanos.js" path="C:\Programacion Full stack\Diseños y Arquitecturas de despliegues I\numeros-romanos-Leanherediadev_Oficial\numeros-romanos-Leanherediadev\romanos.js">
-      <metrics statements="36" coveredstatements="35" conditionals="22" coveredconditionals="21" methods="3" coveredmethods="3"/>
-      <line num="4" count="17" type="cond" truecount="4" falsecount="0"/>
-      <line num="5" count="1" type="stmt"/>
-      <line num="7" count="16" type="cond" truecount="2" falsecount="0"/>
-      <line num="8" count="1" type="stmt"/>
-      <line num="10" count="15" type="cond" truecount="4" falsecount="0"/>
-      <line num="11" count="2" type="stmt"/>
-      <line num="14" count="13" type="stmt"/>
-      <line num="20" count="13" type="stmt"/>
-      <line num="21" count="13" type="stmt"/>
-      <line num="22" count="169" type="stmt"/>
-      <line num="23" count="35" type="stmt"/>
-      <line num="24" count="35" type="stmt"/>
-      <line num="27" count="13" type="stmt"/>
-      <line num="31" count="13" type="cond" truecount="2" falsecount="0"/>
-      <line num="32" count="1" type="stmt"/>
-      <line num="35" count="12" type="stmt"/>
-      <line num="36" count="12" type="cond" truecount="2" falsecount="0"/>
-      <line num="37" count="1" type="stmt"/>
-      <line num="40" count="11" type="stmt"/>
-      <line num="42" count="11" type="cond" truecount="2" falsecount="0"/>
-      <line num="43" count="1" type="stmt"/>
-      <line num="46" count="10" type="stmt"/>
-      <line num="47" count="34" type="cond" truecount="2" falsecount="0"/>
-      <line num="48" count="4" type="stmt"/>
-      <line num="51" count="6" type="stmt"/>
-      <line num="52" count="6" type="stmt"/>
-      <line num="54" count="6" type="stmt"/>
-      <line num="55" count="22" type="stmt"/>
-      <line num="56" count="22" type="cond" truecount="2" falsecount="0"/>
-      <line num="57" count="6" type="stmt"/>
-      <line num="59" count="16" type="stmt"/>
-      <line num="60" count="16" type="stmt"/>
-      <line num="65" count="6" type="cond" truecount="1" falsecount="1"/>
-      <line num="66" count="0" type="stmt"/>
-      <line num="69" count="6" type="stmt"/>
-      <line num="72" count="1" type="stmt"/>
+<coverage generated="1763690115633" clover="3.2.0">
+  <project timestamp="1763690115633" name="All files">
+    <metrics statements="75" coveredstatements="66" conditionals="55" coveredconditionals="46" methods="11" coveredmethods="10" elements="141" coveredelements="122" complexity="0" loc="75" ncloc="75" packages="1" files="8" classes="8"/>
+    <file name="apiError.js" path="C:\Programacion Full stack\Diseños y Arquitecturas de despliegues I\numeros-romanos-Leanherediadev\api\apiError.js">
+      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <line num="3" count="35" type="stmt"/>
+      <line num="4" count="35" type="stmt"/>
+      <line num="5" count="35" type="stmt"/>
+      <line num="6" count="35" type="stmt"/>
+      <line num="7" count="35" type="stmt"/>
+      <line num="8" count="35" type="stmt"/>
+      <line num="9" count="35" type="stmt"/>
+      <line num="15" count="35" type="stmt"/>
+      <line num="21" count="35" type="stmt"/>
+    </file>
+    <file name="arabicToRoman.js" path="C:\Programacion Full stack\Diseños y Arquitecturas de despliegues I\numeros-romanos-Leanherediadev\api\arabicToRoman.js">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="2" count="16" type="stmt"/>
+      <line num="8" count="16" type="stmt"/>
+      <line num="9" count="16" type="stmt"/>
+      <line num="10" count="16" type="stmt"/>
+      <line num="11" count="208" type="stmt"/>
+      <line num="12" count="45" type="stmt"/>
+      <line num="13" count="45" type="stmt"/>
+      <line num="16" count="16" type="stmt"/>
+    </file>
+    <file name="convertirEntradaRomanos.js" path="C:\Programacion Full stack\Diseños y Arquitecturas de despliegues I\numeros-romanos-Leanherediadev\api\convertirEntradaRomanos.js">
+      <metrics statements="7" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <line num="8" count="2" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="19" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="20" count="0" type="stmt"/>
+      <line num="27" count="1" type="stmt"/>
+    </file>
+    <file name="errorMiddleware.js" path="C:\Programacion Full stack\Diseños y Arquitecturas de despliegues I\numeros-romanos-Leanherediadev\api\errorMiddleware.js">
+      <metrics statements="7" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <line num="4" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="5" count="0" type="stmt"/>
+      <line num="6" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="18" count="0" type="stmt"/>
+      <line num="26" count="0" type="stmt"/>
+    </file>
+    <file name="romanToArabic.js" path="C:\Programacion Full stack\Diseños y Arquitecturas de despliegues I\numeros-romanos-Leanherediadev\api\romanToArabic.js">
+      <metrics statements="21" coveredstatements="20" conditionals="20" coveredconditionals="19" methods="1" coveredmethods="1"/>
+      <line num="4" count="24" type="stmt"/>
+      <line num="5" count="24" type="stmt"/>
+      <line num="7" count="24" type="stmt"/>
+      <line num="18" count="24" type="stmt"/>
+      <line num="19" count="73" type="stmt"/>
+      <line num="21" count="73" type="cond" truecount="2" falsecount="0"/>
+      <line num="22" count="46" type="stmt"/>
+      <line num="24" count="27" type="cond" truecount="6" falsecount="0"/>
+      <line num="26" count="10" type="cond" truecount="4" falsecount="0"/>
+      <line num="27" count="4" type="stmt"/>
+      <line num="33" count="6" type="stmt"/>
+      <line num="36" count="8" type="cond" truecount="4" falsecount="0"/>
+      <line num="37" count="2" type="stmt"/>
+      <line num="43" count="6" type="stmt"/>
+      <line num="46" count="5" type="cond" truecount="3" falsecount="1"/>
+      <line num="47" count="0" type="stmt"/>
+      <line num="53" count="5" type="stmt"/>
+      <line num="58" count="3" type="stmt"/>
+      <line num="65" count="18" type="stmt"/>
+      <line num="68" count="64" type="stmt"/>
+      <line num="71" count="15" type="stmt"/>
+    </file>
+    <file name="verificarEntradaDecimal.js" path="C:\Programacion Full stack\Diseños y Arquitecturas de despliegues I\numeros-romanos-Leanherediadev\api\verificarEntradaDecimal.js">
+      <metrics statements="8" coveredstatements="8" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+      <line num="4" count="10" type="stmt"/>
+      <line num="6" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="7" count="2" type="stmt"/>
+      <line num="13" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="20" count="7" type="cond" truecount="4" falsecount="0"/>
+      <line num="21" count="4" type="stmt"/>
+      <line num="27" count="3" type="stmt"/>
+    </file>
+    <file name="verificarEntradaRomanos.js" path="C:\Programacion Full stack\Diseños y Arquitecturas de despliegues I\numeros-romanos-Leanherediadev\api\verificarEntradaRomanos.js">
+      <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="8" count="11" type="cond" truecount="4" falsecount="0"/>
+      <line num="9" count="6" type="stmt"/>
+      <line num="16" count="5" type="stmt"/>
+      <line num="19" count="5" type="stmt"/>
+      <line num="20" count="18" type="cond" truecount="2" falsecount="0"/>
+      <line num="21" count="3" type="stmt"/>
+      <line num="27" count="2" type="stmt"/>
+    </file>
+    <file name="verificarSimbolosRomanos.js" path="C:\Programacion Full stack\Diseños y Arquitecturas de despliegues I\numeros-romanos-Leanherediadev\api\verificarSimbolosRomanos.js">
+      <metrics statements="7" coveredstatements="7" conditionals="11" coveredconditionals="11" methods="2" coveredmethods="2"/>
+      <line num="5" count="15" type="stmt"/>
+      <line num="8" count="39" type="cond" truecount="2" falsecount="0"/>
+      <line num="9" count="9" type="cond" truecount="2" falsecount="0"/>
+      <line num="10" count="5" type="stmt"/>
+      <line num="19" count="34" type="cond" truecount="2" falsecount="0"/>
+      <line num="20" count="30" type="cond" truecount="2" falsecount="0"/>
+      <line num="25" count="5" type="stmt"/>
     </file>
   </project>
 </coverage>
