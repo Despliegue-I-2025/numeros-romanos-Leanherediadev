@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "api": "romanos.js",
+      "src": "romanos.js",
       "use": "@vercel/node"
     }
   ],
-    "routes": [
-      {
-        "api": "/(.*)",
-        "dest": "romanos.js"
-      }
-    ]
-  }
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "romanos.js"
+    }
+  ]
+}
